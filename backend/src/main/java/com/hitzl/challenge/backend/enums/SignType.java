@@ -1,4 +1,4 @@
-package com.hitzl.challenge.backend.observation;
+package com.hitzl.challenge.backend.enums;
 
 public enum SignType {
     SPEED_LIMIT,

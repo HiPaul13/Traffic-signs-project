@@ -1,4 +1,6 @@
-package com.hitzl.challenge.backend.observation;
+package com.hitzl.challenge.backend.entity;
+
+import com.hitzl.challenge.backend.enums.SignType;
 
 import jakarta.persistence.*;
 

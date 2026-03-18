@@ -1,4 +1,6 @@
-package com.hitzl.challenge.backend.observation;
+package com.hitzl.challenge.backend.dto;
+
+import com.hitzl.challenge.backend.enums.SignType;
 
 public class ObservationDto {
 

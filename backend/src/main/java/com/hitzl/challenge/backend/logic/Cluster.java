@@ -1,7 +1,7 @@
 package com.hitzl.challenge.backend.logic;
 
-import com.hitzl.challenge.backend.observation.ObservationDto;
-import com.hitzl.challenge.backend.observation.SignType;
+import com.hitzl.challenge.backend.dto.ObservationDto;
+import com.hitzl.challenge.backend.enums.SignType;
 
 import java.util.ArrayList;
 import java.util.List;
