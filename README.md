@@ -58,7 +58,7 @@ docker ps
 
 ### Windows (PowerShell)
 
-```powershell
+```bash
 cd backend
 .\mvnw.cmd clean spring-boot:run
 ```
