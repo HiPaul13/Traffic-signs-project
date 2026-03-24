@@ -1,4 +1,4 @@
-# 🚗 Traffic Signs Clustering System
+# Traffic Signs Clustering System
 
 Backend-driven system for processing and clustering traffic sign observations based on geographic data.
 
