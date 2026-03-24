@@ -46,9 +46,9 @@ Focus: **data processing, backend architecture & geospatial clustering**
 
 ---
 
-# Voraussetzungen
+# Requirements
 
-Bitte vor dem Start installieren:
+Please install before starting:
 
 * Java 17
 * Node.js (inkl. npm)
@@ -56,7 +56,7 @@ Bitte vor dem Start installieren:
 
 ---
 
-# Projektstruktur
+# Project structure
 
 ```
 Traffic-signs-project/
@@ -70,18 +70,18 @@ Traffic-signs-project/
 
 ---
 
-# Projekt starten (lokal)
+# start Project (lokal)
 
-## 1️⃣ Datenbank starten (Docker)
+## 1️⃣ start Database (Docker)
 
-Im Projekt-Root:
+In Projekt-Root:
 
 ```bash
 cd docker
 docker compose up -d
 ```
 
-Prüfen ob Container läuft:
+Check if the container is running:
 
 ```bash
 docker ps
@@ -89,7 +89,7 @@ docker ps
 
 ---
 
-## 2️⃣ Backend starten (Spring Boot)
+## 2️⃣ start Backend (Spring Boot)
 
 ### Windows (PowerShell)
 
@@ -105,7 +105,7 @@ cd backend
 ./mvnw clean spring-boot:run
 ```
 
-Backend läuft auf:
+Backend runs on:
 
 ```
 http://localhost:8080
@@ -113,7 +113,7 @@ http://localhost:8080
 
 ---
 
-## 3️⃣ Frontend starten (React + TypeScript)
+## 3️⃣ start Frontend (React + TypeScript)
 
 ```bash
 cd frontend
@@ -121,7 +121,7 @@ npm install
 npm run dev
 ```
 
-Frontend läuft typischerweise auf:
+The frontend typically runs on:
 
 ```
 http://localhost:5173
@@ -129,9 +129,9 @@ http://localhost:5173
 
 ---
 
-# Daten importieren (CSV → DB)
+# import Data (CSV → DB)
 
-In neuem Terminal im Projekt-Root:
+In a new terminal at the project root:
 
 ```bash
 cd scripts/import-sign-data
@@ -139,7 +139,7 @@ npm install
 node index.js
 ```
 
-Das Script sendet Observations an:
+The script sends observations to:
 
 ```
 POST http://localhost:8080/api/observations
@@ -149,7 +149,7 @@ POST http://localhost:8080/api/observations
 
 # API Endpoints
 
-### Anzahl Observations
+### Number of observations
 
 ```
 GET /api/observations/count
@@ -157,7 +157,7 @@ GET /api/observations/count
 
 ---
 
-### Alle Observations löschen
+### Delete all observations
 
 ```
 DELETE /api/observations
@@ -165,7 +165,7 @@ DELETE /api/observations
 
 ---
 
-### Cluster berechnen
+### Calculate clusters
 
 ```
 GET /api/observations/clusters?r=30
@@ -173,7 +173,7 @@ GET /api/observations/clusters?r=30
 
 ---
 
-### Cluster in der Nähe einer Position
+### Clusters near a location
 
 ```
 GET /api/observations/clusters/nearby
@@ -185,9 +185,9 @@ GET /api/observations/clusters/nearby
 
 ---
 
-# Datenbank reset
+# Database reset
 
-## Kompletten DB Reset (inkl. Volume)
+## Complete database reset (including volume)
 
 ```bash
 cd docker
@@ -197,12 +197,12 @@ docker compose up -d
 
 ---
 
-# Hinweise
+# Notes
 
-* Observations werden persistent in PostgreSQL gespeichert.
-* Cluster werden zur Laufzeit berechnet.
-* Docker Compose ermöglicht reproduzierbare lokale Umgebung.
-* Backend nutzt Spring Data JPA.
-* Frontend kommuniziert über REST mit Backend.
+* Observations are stored persistently in PostgreSQL.
+* Clusters are calculated at runtime.
+* Docker Compose enables a reproducible local environment.
+* Backend uses Spring Data JPA.
+* The frontend communicates with the backend via REST.
 
 ---
