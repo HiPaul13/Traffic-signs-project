@@ -1,6 +1,41 @@
-# Coding Challenge – Verkehrszeichen Clustering
+# 🚗 Traffic Signs Clustering System
 
-Dieses Projekt importiert Verkehrszeichen-Beobachtungen (Latitude/Longitude + SignType) und clustert sie anhand eines Radius **r**.
+Backend-driven system for processing and clustering traffic sign observations based on geographic data.
+
+The system imports raw observations (latitude, longitude, sign type) and groups them into clusters to approximate real-world traffic signs.
+
+---
+
+## Idea
+
+Traffic sign observations often come from multiple sources and may contain duplicates or noise.  
+This project processes raw observation data and clusters nearby points to identify actual traffic signs.
+
+Focus: **data processing, backend architecture & geospatial clustering**
+
+---
+
+## Features
+
+- Import of observation data via script (CSV → REST API → Database)
+- Clustering of geo-based data points using configurable radius (**r**)
+- Detection of traffic sign clusters from raw observations
+- REST API for querying clusters and observations
+- Dockerized PostgreSQL setup
+- Lightweight frontend for visualization
+
+---
+
+## Architecture
+
+- **Backend:** Spring Boot (Java 17)
+- **Frontend:** React + TypeScript (Vite)
+- **Database:** PostgreSQL (Docker)
+- **Import:** Node.js script (data ingestion pipeline)
+
+➡️ Clear separation between data ingestion, processing, and visualization
+
+---
 
 ## Tech Stack
 
@@ -24,7 +59,7 @@ Bitte vor dem Start installieren:
 # Projektstruktur
 
 ```
-coding-challenge-verkehrszeichen/
+Traffic-signs-project/
 │
 ├── backend/                                Spring Boot Backend
 ├── frontend/                               React TypeScript Frontend
